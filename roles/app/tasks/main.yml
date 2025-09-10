@@ -1,0 +1,10 @@
+- name: Upload static site archive
+  copy:
+    src: /path/to/your/site.tar.gz
+    dest: /tmp/site.tar.gz
+
+- name: Extract site
+  unarchive:
+    src: /tmp/site.tar.gz
+    dest: /var/www/html/
+    remote_src: yes

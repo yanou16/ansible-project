@@ -1,0 +1,5 @@
+- name: Add SSH public key
+  authorized_key:
+    user: rayanelouzazna13
+    state: present
+    key: "{{ lookup('file', '/home/rayanelouzazna13/.ssh/new_ansible_key.pub') }}"

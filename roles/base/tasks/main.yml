@@ -1,0 +1,10 @@
+- name: Update apt
+  apt:
+    update_cache: yes
+    upgrade: dist
+    cache_valid_time: 3600
+
+- name: Install basic utilities
+  apt:
+    name: [curl, git, unzip, fail2ban]
+    state: present
